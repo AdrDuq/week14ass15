@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/layout';
-import { getSortedList } from '../lib/data';
+import { getSortedList } from '../lib/data2';
 
 export async function getStaticProps() {
   const allData = await getSortedList();
@@ -27,14 +27,9 @@ export default function Home({ allData }) {
         ))
         : null }
       </div>
-      <Link
-        href={'cat'} class="btn btn-primary mt-3">
-          To Cats
-      </Link>
-      <Link
-        href={'vibe'} class="btn btn-primary mt-3">
-          To Vibes
-      </Link>
+      <Link href="/" class="btn btn-primary mt-3">
+            ← Back to home
+          </Link>
     </Layout>
   );
 }
